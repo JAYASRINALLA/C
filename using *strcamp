@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include<string.h>
+char String1[10],String2[10];
+void main()
+{
+ printf("enter a password:"); 
+ fgets(String1,sizeof(String1),stdin);
+ printf("re-enter the password:");
+ fgets(String2,sizeof(String2),stdin);
+ if(strcmp(String1,String2)==0)
+ {
+ printf("password is match");
+ }
+ else
+ {
+ printf("password is mismatch");
+}
+}
