@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include<string.h>
+char String1[10],String2[10];
+void main()
+{
+ printf("entera name:"); 
+ fgets(String1,sizeof(String1),stdin);
+ printf("search here:");
+ fgets(String2,sizeof(String2),stdin);
+  if(strcmp(String1,String2)==0)
+ {
+ printf("found");
+ }
+ else
+ {
+ printf(" not found");
+}
+}
+
