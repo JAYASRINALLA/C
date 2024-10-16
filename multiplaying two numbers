@@ -1,0 +1,14 @@
+#include <stdio.h>
+int n,m,p,mul;
+int main() {
+    
+    printf("Enter first num");
+    scanf("%d",&n);
+    printf(" enter second num");
+    scanf("%d",&m);
+    printf("Enter third number");
+    scanf("%d",&p);
+    mul=n*m*p;
+    printf("multiplication  of two numbers is %d",mul);
+    return 0;
+}
