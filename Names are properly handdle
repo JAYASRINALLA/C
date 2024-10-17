@@ -1,0 +1,22 @@
+printf("Enter the name 3:");
+     scanf("%s",c);
+
+    for(int i=0;i<5;i++)
+    {
+        printf("   %c",a[i]);
+    }
+    printf("\n");
+    for( int i=0;i<5;i++)
+    {
+        printf("   %c",b[i]);
+    }
+    printf("\n");
+    for(int i=0;i<5;i++)
+    {
+        printf("   %c",c[i]);
+    }
+      printf("\n");
+}
+
+
+
