@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <windows.h>  // For Sleep function
+
+int main() {
+    int h = 4;  // Initial hour
+    int m = 8;  // Initial minute
+    int s = 0;  // Initial second
+
+    while(1) {
+        // Display the time in hh:mm:ss format
+        printf("\n\n\t\t%02d:%02d:%02d", h, m, s);
+
+        // Sleep for 1 second (1000 milliseconds)
+        Sleep(1000);
+
+        // Clear the screen
+        system("CLS");
+
+        // Increment seconds
+        s = s + 1;
+
+        // If seconds reach 60, reset to 0 and increment minutes
+        if (s == 60) {
+            s = 0;
+            m = m + 1;
+        }
+
+        // If minutes reach 60, reset to 0 and increment hours
+        if (m == 60) {
+            m = 0;
+            h = h + 1;
+        }
+
+        // If hours reach 12, reset to 1 (12-hour format)
+        if (h == 13) {
+            h = 1;
+        }
+
+        // Optional: Add a way to break the infinite loop
+        // For example, by checking if a key has been pressed (Windows-specific)
+        if (GetAsyncKeyState(VK_ESCAPE)) { // Break loop on 'Esc' key press
+            break;
+        }
+    }
+
+    return 0;  // Return 0 to indicate successful program termination
+}
