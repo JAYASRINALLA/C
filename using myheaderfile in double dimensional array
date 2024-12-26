@@ -1,0 +1,53 @@
+#include<stdio.h>
+#include "myheader.h"
+int main()
+{
+    int a[10][10];
+    int r,c;
+    printf("\n enter the order of the matrix");
+    scanf("%d%d",&r,&c);
+    printf("\n enter the values in matrix a\n ");
+    accept(a,r,c);
+    printf("\n the matrix is\n");
+    display(a,r,c);
+    printf("\n the transpose of the matrix is \n");
+    transpose(a,r,c);
+    return 0;
+
+}
+void accept(int a[10][10],int r,int c)
+{
+  int i,j;
+  for(i=0;i<r;i++)
+  {
+      for(j=0;j<c;j++)
+      {
+          scanf("%d",&a[i][j]);
+      }
+  }
+
+}
+void display(int a[10][10],int r,int c)
+{
+     int i,j;
+     for(i=0;i<r;i++)
+    {
+      for(j=0;j<c;j++)
+      {
+          printf("%d",a[i][j]);
+      }
+      printf("\n");
+  }
+}
+void transpose(int a[10][10],int r,int c)
+{
+   int i,j;
+     for(i=0;i<c;i++)
+    {
+      for(j=0;j<r;j++)
+      {
+          printf("%d",a[j][i]);
+      }
+      printf("\n");
+    }
+}
