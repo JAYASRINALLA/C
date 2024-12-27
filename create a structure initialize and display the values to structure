@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+    struct Emp
+    {
+        int eno;
+        char ename[30];
+        double esal;
+    };
+    struct Emp e1={101,"ram",100000};
+    printf("\n the eno is %d",e1.eno);
+    printf("\n the ename is %s",e1.ename);
+    printf("\n the esal is %f",e1.esal);
+    return 0;
+}
